@@ -1,0 +1,65 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.7.11",
+    "@apollo/react-hooks": "^4.0.0",
+    "@radix-ui/react-progress": "^1.0.2",
+    "@radix-ui/react-select": "^1.2.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link-context": "^1.0.20",
+    "apollo-link-http": "^1.5.17",
+    "axios": "^1.4.0",
+    "class-variance-authority": "^0.6.0",
+    "clsx": "^1.2.1",
+    "dotenv": "^16.0.3",
+    "framer-motion": "^10.12.13",
+    "fs": "^0.0.1-security",
+    "graphql-tag": "^2.12.6",
+    "jwt-decode": "^3.1.2",
+    "lucide-react": "^0.220.0",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.10.0",
+    "react-scripts": "5.0.1",
+    "semantic-ui-css": "^2.5.0",
+    "semantic-ui-react": "^2.1.4",
+    "tailwind-merge": "^1.12.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "https://grind-backend-deployment.onrender.com/",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
