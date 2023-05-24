@@ -9,8 +9,8 @@ import { createHttpLink } from "apollo-link-http";
 import { setContext } from "apollo-link-context";
 
 const httpLink = createHttpLink({
-  // uri: 'https://grind-backend-deployment.onrender.com/',
-  uri: "http://localhost:5000",
+  uri: 'https://grind-backend-v2.onrender.com/',
+  // uri: "http://localhost:5000",
 });
 
 const authLink = setContext((_, { headers }) => {
