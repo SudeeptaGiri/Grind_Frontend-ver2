@@ -33,7 +33,7 @@ if(currUser){
 
   function commentOnPost() {
     console.log("Comment on post!!");
-  }
+  }``
 
   return (
     <Card fluid>

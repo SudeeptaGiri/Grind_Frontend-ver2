@@ -5,12 +5,7 @@ import Button from "./ui/Button";
 import {getMLScore} from "../dependencies/Grind-ML";
 import axios from "axios";
 
-import dotenv from 'dotenv';
-dotenv.config();
-
-var customAPI = process.env.GCLOUD_AUTH_TOKEN;
-
-
+var customAPI = "ya29.a0AWY7CknTv0IB4g5OnKCVWJarzg1mvZVPYPrCbXhTTqo75XprxZTdWxouZyiTONd-AzCuvd5TstQZQUlVFV797lro7jVD7pa_OMjK1-LDuxKTou_ji_rzP6dtdsPEmzAqlo40mNjmwvmVMI-U1WOUHxoRg8bgoLlRkOaAzgaCgYKATcSARESFQG1tDrpNLBQcN5FuufUhsdD9zsJEg0173";
 
 export default function Upload() {
     const [res, setRes] = useState("");

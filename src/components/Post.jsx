@@ -5,9 +5,33 @@ import { Input } from './ui/Input';
 import { Textarea } from './ui/textarea';
 import Title from './ui/Title';
 
+import gql from 'graphql-tag';
+import { useForm } from '../util/hooks';
+import {useMutation} from '@apollo/react-hooks';
 
 export default function Post() {
     const [state, setState] = useState(false);
+
+    const {values, onChange, onSubmit}  = useForm(createPostCallback, {
+        body: '',
+        title: '',
+        eventAt: ''
+    });
+
+    const [createPost, { error }] = useMutation(CREATE_POST_MUTATION, {
+        variables: values,
+        update(_, result) {
+            console.log(result)
+            values.body = '';
+            values.title = '';
+            values.eventAt = '';
+        }
+    })
+
+    function createPostCallback() {
+        createPost();
+    }
+
 
     return (
         <>
@@ -29,14 +53,35 @@ export default function Post() {
                     <Title className="text-center mb-11 text-neutral-200">
                         Add Event
                     </Title>
-                    <form action="" className='text-lg grid gap-8'>
-                        <Input type='text' name='title' placeholder='Title' />
-                        <Textarea type='text' name='description' placeholder='Description' className='' />
-                        <Input type='text' name='date' placeholder='Date' />
-                        <Button>Post</Button>
+                    <form onSubmit= {onSubmit} action="" className='text-lg grid gap-8'>
+                        <Input onChange={onChange} value={values.title} type='text' name='title' placeholder='Title' />
+                        <Textarea onChange={onChange} value={values.body} type='text' name='body' placeholder='Description' className='' />
+                        <Input onChange={onChange} value={values.eventAt} type='text' name='eventAt' placeholder='Date' />
+                        <Button type="submit">Post</Button>
                     </form>
                 </div>
             </div>
         </>
     )
 }
+
+const CREATE_POST_MUTATION = gql `
+mutation ($body: String!, $title: String!, $eventAt: String!) {
+  createPost(body: $body, title: $title, eventAt: $eventAt) {
+    id
+    body
+    createdAt
+    username
+    eventAt
+    title
+    likes {
+        id username createdAt
+    }
+    likeCount 
+    comments {
+        id body username createdAt
+    }   
+    commentCount
+  }
+}
+`

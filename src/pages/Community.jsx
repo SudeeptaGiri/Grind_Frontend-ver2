@@ -95,7 +95,7 @@ function Container({data}) {
         <div className="flex gap-0.5 rounded-lg overflow-hidden">
             <div className="p-4 bg-violet-200 grid place-items-center">
                 <img
-                    src={data.iconUrl}
+                    src={data.iconUrl === "null" ? "https://react.semantic-ui.com/images/avatar/large/matthew.png" : data.iconUrl}
                     alt=""
                     width={60}
                     height={60}
@@ -106,7 +106,7 @@ function Container({data}) {
                         {data.username}
                     </h3>
                     <h4 className="text-sm"></h4>
-                    <h5 className="text-xs">{data.email}</h5>
+                    <h5 className="text-xs">{data.email === null ? "contactme@grind.co.in" : data.email}</h5>
                 </div>
             </div>
 

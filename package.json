@@ -17,7 +17,6 @@
     "axios": "^1.4.0",
     "class-variance-authority": "^0.6.0",
     "clsx": "^1.2.1",
-    "dotenv": "^16.0.3",
     "framer-motion": "^10.12.13",
     "fs": "^0.0.1-security",
     "graphql-tag": "^2.12.6",

@@ -21,7 +21,7 @@ async function forwardDefData() {
       {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`
+          'Authorization': `Bearer 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`
         }
       }
     );
@@ -47,7 +47,7 @@ async function getTasksGPT() {
       {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}}`
+          'Authorization': `Bearer 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`
         }
       }
     );
