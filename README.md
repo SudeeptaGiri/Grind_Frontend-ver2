@@ -20,7 +20,7 @@ Our platform ensures end-to-end encrypted messages to protect users' privacy and
 
 ## Features
 - **Create Post** : Create posts, upload images and videos
-- **Like Post**: You can like the posts
+- **Like Post**: You can like the  posts
 - **Comment Posts**: You can comment on posts
 - **Roadmap**: Get personalized roadmap and feedback on the choice of your sports.
 - **Task monitoring**: Get your tasks monitored by coaches and industry experts.
